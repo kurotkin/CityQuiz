@@ -33,15 +33,13 @@ public class QuizActivity extends AppCompatActivity {
         mQuestionTextView.setText(question);
 
 
-        // Получение ссылки на виджеты
-        mTrueButton = (Button) findViewById(R.id.true_button);
-
-        // Назначение слушателя для кнопки TRUE
-        mTrueButton.setOnClickListener(new View.OnClickListener() {
+        mTrueButton = (Button) findViewById(R.id.true_button);       // Получение ссылки на виджеты
+        mTrueButton.setOnClickListener(new View.OnClickListener() {  // Назначение слушателя для кнопки TRUE
             @Override
             public void onClick(View v) {
                 checkAnswer(true);
-            } });
+            }
+        });
 
 
         mFalseButton = (Button) findViewById(R.id.false_button);
@@ -75,7 +73,6 @@ public class QuizActivity extends AppCompatActivity {
         } else {
             messageResId = R.string.incorrect_toast;
         }
-        Toast.makeText(this, messageResId, Toast.LENGTH_SHORT)
-                .show();
+        Toast.makeText(this, messageResId, Toast.LENGTH_SHORT).show();
     }
 }
