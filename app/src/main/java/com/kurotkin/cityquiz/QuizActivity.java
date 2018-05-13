@@ -73,6 +73,7 @@ public class QuizActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 mCurrentIndex = (mCurrentIndex - 1) % mQuestionBank.length;
+                if(mCurrentIndex < 0) mCurrentIndex = mQuestionBank.length;
                 updateQuestion();
             }
         });
